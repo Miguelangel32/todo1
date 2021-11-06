@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.tarea.label }}
+        {{ form.tarea() }} 
+        <button>Agregar tarea</button>
+
+    </form>
+
+    <a href="{{ url_for('index') }}">Regresar a home</a>
+
+{% endblock %}
